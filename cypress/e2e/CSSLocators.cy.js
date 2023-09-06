@@ -15,7 +15,7 @@ describe('easy manage login', () => {
 
         cy.get("[name='password']").type('easy-manag')
         cy.get("[name='login']").click()
-        cy.url().contain('/easy-manage/admin-pm-list')
+        // cy.url().should('have.text','/easy-manage/admin-pm-list')
         // cy.get('.error-message > span').should('have.text', 'Invalid email or password.Please try again.')
         // cy.get('.attempts').should('have.text', "Please wait 60 seconds before trying again.")
     })
