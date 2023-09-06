@@ -1,10 +1,10 @@
 describe('CSS locators', () => {
     it('CSS locators', () => {
         cy
-        .visit("http://automationpractice.com/index.php")
-        cy.get("#search_query_top").type("T-Shirts")
+        .visit("http://localhost/easy-manage/")
+        cy.get("[name='email']").type("wakemanja007@gmail.com")
 
-        cy.get("[name='submit_search']").click()
-        cy.get(".lighter").contains("T-Shirts")
+        cy.get("[name='password']").type('easy-manage')
+        cy.get("[name='login']").click()
     })
 })
