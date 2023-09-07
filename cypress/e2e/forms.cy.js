@@ -10,9 +10,9 @@ describe('form tests', () => {
             cy.getDataTest('subscribe-button').click()
             cy.contains(/Successfully subbed: ryan@coderyan.com!/i).should('exist')
             cy.wait(3000)
-            cy.contains(/Successfully subbed: ryan@coderyan.com!/i).should('not.exist')
-
-
+            cy.contains(/Successfully subbed: ryan@coderyan.com!/i).should('not.exist') 
             
+            cy.get('@subscribe-input').type('ryan!coderyan.io')
+            cy.getDataTest('subscribe-button').click()
         })
 })
