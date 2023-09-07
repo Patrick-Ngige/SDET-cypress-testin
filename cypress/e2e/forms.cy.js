@@ -18,6 +18,9 @@ describe('form tests', () => {
             cy.contains(/invalid email: ryan@coderyan.io/i).should('exist')
             cy.wait(3000)
             cy.contains(/invalid email: ryan@coderyan.io/i).should('not.exist')
+
+            cy.contains(/fail/i).should('not.exist')
             cy.getDataTest('subscribe-button').click()
+            cy.contains(/fail/i).should('exist')
         })
 })
