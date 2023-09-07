@@ -12,7 +12,12 @@ describe('form tests', () => {
             cy.wait(3000)
             cy.contains(/Successfully subbed: ryan@coderyan.com!/i).should('not.exist') 
             
-            cy.get('@subscribe-input').type('ryan!coderyan.io')
+            cy.get('@subscribe-input').type('ryan@coderyan.io')
+            cy.contains(/invalid email: ryan@coderyan.io/i).should('not.exist')
+            cy.getDataTest('subscribe-button').click()
+            cy.contains(/invalid email: ryan@coderyan.io/i).should('exist')
+            cy.wait(3000)
+            cy.contains(/invalid email: ryan@coderyan.io/i).should('not.exist')
             cy.getDataTest('subscribe-button').click()
         })
 })
