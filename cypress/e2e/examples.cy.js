@@ -35,5 +35,6 @@ describe("Test various examples", () => {
             message: 'successfully intercepted request'
         }
     })
+    cy.getDataTest('post-button').click();
   })
 });
