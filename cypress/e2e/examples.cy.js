@@ -18,5 +18,7 @@ describe('Test various examples', () => {
         cy.getDataTest('nav-forms').click();
         cy.location("pathname").should("eq", "/forms")
 
+        cy.getDataTest('nav-component').click();
+        cy.location("pathname").should("eq", "/component")
     })
 })
