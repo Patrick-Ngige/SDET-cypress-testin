@@ -9,5 +9,8 @@ describe('Test various examples', () => {
         cy.getDataTest('nav-overview').click();
         cy.location("pathname").should("eq", "/overview")
 
+        cy.getDataTest('nav-fundamentals').click();
+        cy.location("pathname").should("eq", "/fundamentals")
+
     })
 })
