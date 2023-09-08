@@ -28,4 +28,12 @@ describe("Test various examples", () => {
     // cy.location("pathname").should("equal", "/examples");
 
   });
+
+  it.only('intercepts', () => {
+    cy.intercept("POST", 'http://localhost:3000/examples', {
+        body: {
+            message: 'successfully intercepted request'
+        }
+    })
+  })
 });
