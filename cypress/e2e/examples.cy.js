@@ -6,5 +6,8 @@ describe('Test various examples', () => {
         cy.getDataTest('nav-why-cypress').click();
         cy.location("pathname").should("eq", "/")
 
+        cy.getDataTest('nav-overview').click();
+        cy.location("pathname").should("eq", "/overview")
+
     })
 })
