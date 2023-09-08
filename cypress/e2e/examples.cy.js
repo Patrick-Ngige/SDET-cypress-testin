@@ -20,5 +20,8 @@ describe('Test various examples', () => {
 
         cy.getDataTest('nav-component').click();
         cy.location("pathname").should("eq", "/component")
+
+        cy.getDataTest('nav-best-practices').click();
+        cy.location("pathname").should("eq", "/best-practices")
     })
 })
