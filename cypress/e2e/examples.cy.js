@@ -24,5 +24,8 @@ describe("Test various examples", () => {
     cy.getDataTest("nav-examples").click();
     cy.location("pathname").should("equal", "/examples");
 
+    // cy.getDataTest("nav-examples").click();
+    // cy.location("pathname").should("equal", "/examples");
+
   });
 });
