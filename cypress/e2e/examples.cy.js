@@ -12,9 +12,6 @@ describe("Test various examples", () => {
     cy.getDataTest("nav-fundamentals").click();
     cy.location("pathname").should("equal", "/fundamentals");
 
-    cy.getDataTest("nav-examples").click();
-    cy.location("pathname").should("equal", "/examples");
-
     cy.getDataTest("nav-forms").click();
     cy.location("pathname").should("equal", "/forms");
 
@@ -23,5 +20,9 @@ describe("Test various examples", () => {
 
     cy.getDataTest("nav-best-practices").click();
     cy.location("pathname").should("equal", "/best-practices");
+
+    cy.getDataTest("nav-examples").click();
+    cy.location("pathname").should("equal", "/examples");
+
   });
 });
