@@ -37,5 +37,8 @@ describe("Test various examples", () => {
   })
   it.only('grudges', () => {
     cy.contains(/add some grudges/i)
+    cy.getDataTest('grudge-input').within(() => {
+        cy.get('input').type('some grudge')
+    })
   })
 });
