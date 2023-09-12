@@ -54,6 +54,8 @@ describe("Test various examples", () => {
       cy.get("li").should("have.length", 1);
     });
 
+    cy.getDataTest('grudge-list-title').should('have.text', 'Add Some Grudges')
+
     cy.getDataTest("grudge-input").within(() => {
       cy.get("input").type("number 2");
     });
