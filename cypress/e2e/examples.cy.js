@@ -61,5 +61,17 @@ describe("Test various examples", () => {
         cy.get('li').its(0).should('contains.text', 'some grudge')
     })
 
+    cy.getDataTest('grudge-list').within(() => {
+      cy.get('li').its(0).within(() => {
+        cy.get('button').click()
+      })
+
+      cy.getDataTest('grudge-list').within(() => {
+        cy.get('li').should('have.length', 2)
+        cy.get('li').its(0).should('contains.text', 'some grudge')
+    })
+      
+  })
+
   })
 });
